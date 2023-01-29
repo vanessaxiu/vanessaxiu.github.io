@@ -1,3 +1,6 @@
+/* reference: https://github.com/jhu-ep-coursera/fullstack-course4 */
+
+
 body {
   font-size: 16px;
   color: black;
@@ -5,8 +8,7 @@ body {
   font-family: 'Commissioner';
 }
 
-/** HEADER **/
-#header-nav {
+#bar-nav {
   background-color: lightblue;
   border-radius: 0;
   border: 0;
@@ -17,13 +19,13 @@ body {
   width: 1000px;
   height: 150px;
 }
-.navbar-brand {
+.bar-long {
   padding-top: 15px;
 }
-.navbar-brand a:hover, .navbar-brand a:focus {
+.bar-long a:hover, .bar-long a:focus {
   text-decoration: none;
 }
-.navbar-brand p {
+.bar-long p {
   color: #000;
   font-size: 0.8em;
   margin-top: 10px;
@@ -33,17 +35,17 @@ body {
   position:static;
 }
 
-#nav-list {
+#head-list {
   margin-top: 10px;
 }
-#nav-list a {
+#head-list a {
   color: black;
   text-align: center;
 }
-#nav-list a:hover {
+#head-list a:hover {
   background: #E7E7E7;
 }
-#nav-list a span {
+#head-list a span {
   font-size: 1em;
 }
 
@@ -62,17 +64,15 @@ body {
   padding-right: 15px;
 }
 
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+.bar-head button.navbar-toggle, .bar-head .icon-bar {
   border: 1.5px solid black;
 }
-.navbar-header button.navbar-toggle {
+.bar-head button.navbar-toggle {
   clear: both;
   margin-top: -30px;
 }
-/* END HEADER */
 
-/* FOOTER */
-.panel-footer {
+.bar-footer {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
@@ -80,7 +80,7 @@ body {
   border-top: 0;
   color:whitesmoke;
 }
-.panel-footer div.row {
+.bar-footer div.row {
   margin-bottom: 35px;
 }
 #about p {
@@ -92,16 +92,12 @@ body {
   font-size: .6em;
   line-height: 1.8;
 }
-/* END FOOTER */
 
-
-
-/* HOME PAGE */
 #test {
   height: 30px;
   width: 100%;
   position: relative;
-
+  margin-top: 270px;
   margin-bottom: 5px;
 }
 #infor {
@@ -141,10 +137,10 @@ body {
   background-position: center;
 }
 #shag-tile {
-  background: url('../images/home-shag.jpeg') no-repeat;
+  background: url('../images/home-common-sti.png') no-repeat;
   background-position: center;
 }
-#hpv-tile span, #prep-tile span, #shag-tile span {
+#hpv-tile span, #prep-tile span {
   position: absolute;
   top: 0;
   right: 0;
@@ -155,37 +151,27 @@ body {
   color: whitesmoke;
   opacity: .6;
 }
-/* END HOME PAGE */
 
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpg') no-repeat;
-    height: 675px;
-  }
+#shag-tile span{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  background-color: whitesmoke;
+  color: red;
+  opacity: .8;
 }
-
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
+@media (min-width: 1001px) and (max-width: 1200px) {
   #website-logo {
     background: url('../images/website-logo-medium.png') no-repeat;
     width: 500px;
     height: 75px;
     margin: 5px 5px 5px 0;
   }
-  /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    background: url('../images/jumbotron_992.jpg') no-repeat;
-    height: 558px;
-  }
-  /* End Home Page */
 }
-
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 801px) and (max-width: 1000px) {
 
   #website-logo {
     background: url('../images/website-logo-medium.png') no-repeat;
@@ -194,7 +180,7 @@ body {
     margin: 5px 5px 5px 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
   #website-logo {
     background: url('../images/website-logo-medium.png') no-repeat;
@@ -202,22 +188,22 @@ body {
     height: 75px;
     margin: 5px 5px 5px 0;
   }
-  .navbar-brand {
+  .bar-long {
     padding-top: 10px;
     height: 80px;
   }
-  .navbar-brand p { /* Kosher cert */
+  .bar-long p {
     font-size: .6em;
     margin-top: 12px;
   }
-  .navbar-brand p img { /* Star-K */
+  .bar-long p img { 
     height: 20px;
   }
 
-  #collapsable-nav a { /* Collapsed nav menu text */
+  #collapsable-nav a {
     font-size: 1.2em;
   }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
+  #collapsable-nav a span { 
     font-size: 1em;
     margin-right: 5px;
   }
@@ -234,36 +220,16 @@ body {
     font-size: .7em;
     letter-spacing: .1em;
   }
-  /* End Header */
 
-  /* Footer */
-  .panel-footer section {
+  .bar-footer section {
     margin-bottom: 30px;
     text-align: center;
   }
-  .panel-footer section:nth-child(3) {
-    margin-bottom: 0; /* margin already exists on the whole row */
+  .bar-footer section:nth-child(3) {
+    margin-bottom: 0; 
   }
-  .panel-footer section hr {
+  .bar-footer section hr {
     width: 50%;
   }
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
-  }
-  #menu-tile, #specials-tile {
-    width: 360px;
-    margin: 0 auto 15px;
-  }
 
-  .menu-item-photo {
-    margin-right: auto;
-  }
-  .menu-item-tile .menu-item-price {
-    text-align: center;
-  }
-  .menu-item-description {
-    text-align: center;;
-  }
 }
-

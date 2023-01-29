@@ -1,3 +1,6 @@
+<!-- reference: https://github.com/jhu-ep-coursera/fullstack-course4 -->
+
+
 <!doctype html>
   <head>
     <title>Wholesome</title>
@@ -7,30 +10,28 @@
   </head>
 <body>
   <header>
-    <nav id="header-nav" class="navbar navbar-default">
+    <nav id="bar-nav" class="navbar navbar-default">
       <div class="container">
-        <div class="navbar-header">
+        <div class="bar-head">
           <a href="index.html" class="pull-left">
             <div id="website-logo"></div>
           </a>
 
-          <div class="navbar-brand ">
+          <div class="bar-long ">
             <p >Making Sex & Drugs Safer.</p>
           </div>
 
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
         </div>
 
         <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-right">
+           <ul id="head-list" class="nav navbar-nav navbar-right">
             <li id="navHomeButton" class="visible-xs active">
               <a href="index.html">Content </a>
             </li> 
+            <li id="description" class="hidden-xs">
+              <span>Free STBBI* Risk Assessment Service</span>
+            <div>*STBBI: Sexually Transmitted and Blood-Borne Infection</div>
+          </li>
             <li id="navMenuButton">
               <a href="index3.html" onclick="$dc.loadMenuCategories();">
                 <span class="glyphicon glyphicon-list-alt"></span><br class="hidden-xs"> Take a Test</a>
@@ -43,14 +44,11 @@
               <a href="#about">
                 <span class="glyphicon glyphicon-question-sign"></span><br class="hidden-xs"> About</a>
             </li>
-            <li id="description" class="hidden-xs">
-                <span>Free STBBI* Risk Assessment Service</span>
-              <div>*STBBI: Sexually Transmitted and Blood-Borne Infection</div>
-            </li>
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <div id="description" class="text-center visible-xs">
@@ -60,26 +58,32 @@
   <div id="definition" class="text-center visible-xs">*STBBI: Sexually Transmitted and Blood-Borne Infection</div>
   
   <div id="main-page" class="container">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <a href="https://www.canada.ca/en/public-health/services/infectious-diseases/sexual-health-sexually-transmitted-infections/canadian-guidelines/stbbi-prevention-guide.html"><div id="shag-tile"><span>
+        <p>In the past 20 years, there has been a steady increase in rate of a number of sexually transmitted and blood-borne infections (STBBIs). <br> 
+          From 2014 to 2018, there was a record-high increase in syphilis (151%), gonorrhoea (110%), and chlamydia (18%).<br>
+         Stigma and discrimination against marginalized groups complicates existing barriers and increases inaccessibility to healthcare and prevention. The good news is, you can take a free test to assess your risk for STBBI. <br>
+         Our test is evidence-guided and reflects your unique risk profile. 
+        </p></span></div></a>
+    </div>
+
     <div id="test">
-      
       <a href="index3.html"><span> Take a <em>free</em> test to assess your STBBI risk </span></a>
     </div>
-    
+
     <div id="infor">
     <span> Affordable prevention, in <em>your</em> community</span>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <a href="https://www.quebec.ca/en/health/advice-and-prevention/vaccination/human-papillomavirus-hpv-vaccination-program/cost"><div id="hpv-tile"><span>HPV Vaccine</span></div></a>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-6 col-sm-6 col-xs-12">
       <a href="https://www.concordia.ca/cunews/offices/provost/health/topics/prep-pep-montreal.html"><div id="prep-tile"><span>Getting on PrEP</span></div></a>
-    </div>
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <a href="https://www.mcgill.ca/wellness-hub/health-promotion/shag-shop"><div id="shag-tile"><span>McGill Shag Shop</span></div></a>
     </div>
 </div>
 
-  <footer class="panel-footer">
+  <footer class="bar-footer">
     <div class="container">
       <div class="row">
         <section id="about" class="col-sm-6">
@@ -90,7 +94,15 @@
         </section>
         <section id="reference" class="col-sm-6">
           <span>Reference</span><br>
-          TO BE UPDATED
+          Code: <a href="https://github.com/jhu-ep-coursera/fullstack-course4"><p>Yaakov Chaikin. HTML, CSS, and Javascript for Web Developers, Coursera.</p></a>
+          Image: <a href="https://stock.adobe.com/ca/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aaudio%5D=0&filters%5Binclude_stock_enterprise%5D=0&filters%5Bis_editorial%5D=0&filters%5Bfree_collection%5D=0&filters%5Bcontent_type%3Aimage%5D=1&k=high+risk&order=relevance&safe_search=1&native_visual_search=&similar_content_id=436297348&model_id=&serie_id=&find_similar_by=all&prevk=high+risk&limit=100&search_page=1&search_type=visual-search-drag&get_facets=0&asset_id=436297304"><p>Lucky Creative's. High risk concept on speedometer vector illustration, Speedometer icon.</p></a>
+          Research: <a href="https://www.canada.ca/en/public-health/services/infectious-diseases/sexual-health-sexually-transmitted-infections/canadian-guidelines/stbbi-prevention-guide.html"><p>Public Health Agency of Canada. STBBIs in Canada.</p></a>
+          <a href=" Xu X, Ge Z, Chow EPF, et al. A Machine-Learning-Based Risk-Prediction Tool for HIV and Sexually Transmitted Infections Acquisition over the Next 12 Months. J Clin Med. 2022;11(7):1818. Published 2022 Mar 25. doi:10.3390/jcm11071818"><p> Xu X, Ge Z, Chow EPF, et al. A Machine-Learning-Based Risk-Prediction Tool for HIV and Sexually Transmitted Infections Acquisition over the Next 12 Months. J Clin Med. 2022;11(7):1818. Published 2022 Mar 25. doi:10.3390/jcm11071818</p></a>
+          
+          
+         
+
+
           <hr class="visible-xs">
         </section>
       </div>
