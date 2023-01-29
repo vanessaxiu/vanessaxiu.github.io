@@ -1,0 +1,92 @@
+var quiz = [
+    {
+        "question": "Question01",
+        "choices": ["choice1", "choice2", "choice3", "choice4"],
+        "answer": [1, 2, 3, 4]
+    }, {
+        "question": "Question02",
+        "choices": ["choice1", "choice2", "choice3", "choice4"],
+        "answer": [1, 2, 3, 4]
+    }, {
+        "question": "Question03",
+        "choices": ["choice1", "choice2", "choice3", "choice4"],
+        "answer": [1, 2, 3, 4]
+    }, {
+        "question": "Question04",
+        "choices": ["choice1", "choice2", "choice3", "choice4"],
+        "answer": [1, 2, 3, 4]
+    }, {
+        "question": "Question05",
+        "choices": ["choice1", "choice2", "choice3", "choice4"],
+        "answer": [1, 2, 3, 4]
+    }
+];
+// define elements
+
+// init vars
+var currentQuestion = 0,
+    score = 0;
+
+function $(id) { // shortcut for document.getElementById
+    return document.getElementById(id);
+}
+
+var content = $("content"),
+    questionContainer = $("questionContainer"),
+    choicesContainer = $("choicesContainer"),
+    scoreContainer = $("scoreContainer"),
+    submitBtn = $("submitBtn");
+
+function askQuestion() {
+    var choices = quiz[currentQuestion].choices,
+        choicesHtml = "";
+
+    // loop through choices, and create radio buttons
+    for (var i = 0; i < choices.length; i++) {
+        choicesHtml += "<input type='radio' name='quiz" + currentQuestion +
+        "' id='choice" + (i + 1) +
+        "' value='" + choices[i] + "'>" +
+        " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label><br>";
+    }
+
+    // load the question
+    questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
+    quiz[currentQuestion].question;
+
+    // load the choices
+    choicesContainer.innerHTML = choicesHtml;
+}
+
+function checkAnswer() {
+    // determine which radio button they clicked
+    var radios = document.getElementsByName("quiz" + currentQuestion);
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) { // if this radio button is checked
+            score = score + quiz[currentQuestion].answer[i];
+        }
+    }
+
+    // if we're not on last question, increase question number
+    if (currentQuestion < quiz.length - 1) {
+        currentQuestion++;
+        askQuestion();
+    } else {
+        showFinalResults();
+    }
+
+}
+
+function showFinalResults() {
+    var resultString = "";
+    for (var i = 0; i < 1; i += 1) {
+        resultString += (i + 1) + ". " + score + "<br />";
+    }
+    questionContainer.innerHTML = "";
+    content.innerHTML =
+     "<h2>You've complited the quiz!</h2>" +
+    "<h2>Below are your results:</h2>" +
+    resultString;
+}
+
+window.addEventListener("load", askQuestion, false);
+submitBtn.addEventListener("click", checkAnswer, false);
